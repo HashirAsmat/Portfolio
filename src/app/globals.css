@@ -1,27 +1,55 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --background:245,245,245;
+  --color-faint:160,160,160;
+  --color-h1-theme:16,16,16;
+  --color-link-theme:127,127,127;
+  --color-logo-theme:16,16,16;
+  background-color: rgba(var(--background));
+}
+.dark{
+  --background:16,16,16;
+  --color-faint: 160,160,160;
+  --color-h1-theme: 240, 240, 240;
+  --color-link-theme: 200, 200, 200;
+  --color-logo-theme: 240, 240, 240;
+  background-color: rgba(var(--background));
+}
+
+.parent-container{
+    display: flex;     
+    flex-direction: column; 
+    overflow: hidden;  
+} */
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background: 16, 16, 16; /* Default to dark mode */
+  --color-faint: 160, 160, 160;
+  --color-h1-theme: 240, 240, 240;
+  --color-link-theme: 200, 200, 200;
+  --color-logo-theme: 240, 240, 240;
+  background-color: rgba(var(--background));
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.light {
+  --background: 245, 245, 245;
+  --color-faint: 160, 160, 160;
+  --color-h1-theme: 16, 16, 16;
+  --color-link-theme: 127, 127, 127;
+  --color-logo-theme: 16, 16, 16;
+  background-color: rgba(var(--background));
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.parent-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }

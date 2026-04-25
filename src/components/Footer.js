@@ -52,7 +52,7 @@ const Footer = () => {
       <p className="text-xs md:text-sm mb-1">
         Designed and coded by <span className="font-semibold">Hashir Asmat</span>
       </p>
-      <p className="text-xs md:text-sm">© Hashir 2025</p>
+      <p className="text-xs md:text-sm">© Hashir 2026</p>
     </footer>
   );
 };

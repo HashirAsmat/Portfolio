@@ -1,9 +1,14 @@
 import WorkHistory from "@/components/WorkHistory";
 import TechnologyStack from "@/components/TechnologyStack";
 import FeaturedProjects from "@/components/FeaturedProjects";
+import Hero from "@/components/Hero";
+import ScrollEffects from "@/components/ScrollEffects";
 
 export default function Home() {
   return (
+    <>  
+    <ScrollEffects />
+    <Hero />
     <div className="parent-container px-6 sm:px-10 md:px-20 pt-10 relative max-w-[1300px] mx-auto">
          {/* <div
         className="absolute z-0 top-0 right-4 sm:right-10 md:right-[100px] w-[40%] sm:w-[30%] aspect-square bg-cover bg-center opacity-80"
@@ -13,7 +18,7 @@ export default function Home() {
       ></div> */}
       {/* Hero Text */}
       
-      <div className="hero-text relative z-10 text-center md:text-left">
+      {/* <div className="hero-text relative z-10 text-center md:text-left">
         <span
           className="
             font-inter 
@@ -39,7 +44,7 @@ export default function Home() {
         >
           Full Stack Engineer
         </span>
-      </div>
+      </div> */}
 
       {/* Other Components */}
       <div>
@@ -52,5 +57,6 @@ export default function Home() {
         <FeaturedProjects />
       </div>
     </div>
+    </>
   );
 }

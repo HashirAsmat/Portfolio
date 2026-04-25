@@ -99,8 +99,8 @@ export default function Navbar() {
       {/* LEFT SIDE (LOGO + TOGGLE) */}
       <div className="flex items-end space-x-3">
 
-        {/* ✅ LOGO */}
-        <Link href="/">
+       
+        {/* <Link href="/">
           <Image
             src="/logos/StellarLogo.png" // put your logo in public folder
             alt="Stellar Logo"
@@ -109,8 +109,10 @@ export default function Navbar() {
             className="hidden md:block object-contain"
             priority
           />
-        </Link>
-
+        </Link> */}
+ <div className="flex items-end space-x-3">
+        <span className="hidden md:block text-3xl font-bold text-color_h1">STELLAR</span>
+</div>
         {/* DARK MODE TOGGLE */}
         <label className="flex items-baseline cursor-pointer pb-1">
           <input

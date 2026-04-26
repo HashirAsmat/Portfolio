@@ -3,17 +3,18 @@ import TechnologyStack from "@/components/TechnologyStack";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import Hero from "@/components/Hero";
 import ScrollEffects from "@/components/ScrollEffects";
-//import StellarSection from "@/components/StellarSection";
 import ScrollDepthSection from "@/components/ScrollDepthSection";
+import WorkCard from "@/components/WorkCard";
+import SectionHeading from "@/components/SectionHeading";
 
 export default function Home() {
   return (
     <>  
     <ScrollEffects />
+     <Hero />
     <ScrollDepthSection />
-    <Hero />
-   
-   
+    <SectionHeading title={'selected work'}/>
+    <WorkCard/>
    
     <div className="parent-container px-6 sm:px-10 md:px-20 pt-10 relative max-w-[1300px] mx-auto">
          {/* <div

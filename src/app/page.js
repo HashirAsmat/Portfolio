@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <>  
     <ScrollEffects />
-     <Hero />
     <ScrollDepthSection />
+     <Hero />
     <SectionHeading title={'selected work'}/>
     <WorkCard/>
    

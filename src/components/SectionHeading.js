@@ -100,7 +100,7 @@ export default function SectionHeading({
   const [minScale, maxScale] = scaleRange;
 
   return (
-    <div className="w-full flex justify-center bg-black pt-32 pb-10">
+    <div className="w-full flex justify-center bg-black pt-10 pb-2">
       
       {/* STATIC WRAPPER (no transform here) */}
       <div ref={ref} className="relative">

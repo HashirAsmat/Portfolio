@@ -14,7 +14,26 @@ export default function Home() {
     <ScrollDepthSection />
      <Hero />
     <SectionHeading title={'selected work'}/>
-    <WorkCard/>
+    <WorkCard
+  title="Salesforce Platform"
+  description="Custom solutions. Smarter automation. Better CRM."
+  image="/salesforce_workplace.png"
+  logo="/logos/salesforce.svg"
+  Cardlabel="01 | SALESFORCE ENGINEER"
+  companylogo="/logos/infinywise.png"
+  gradientColor="23, 156, 217"
+/>
+
+<WorkCard
+  title="Shopify Development"
+  description="Custom Design. SEO Strategies. Optimized Performance."
+  image="/HoneyOnlineSite.png"
+  logo="/logos/shopify.svg"
+  Cardlabel="02 | Shopify Developer"
+  companylogo="/logos/infinywise.png"
+  gradientColor="150, 186, 68"
+/>
+
    
     <div className="parent-container px-6 sm:px-10 md:px-20 pt-10 relative max-w-[1300px] mx-auto">
          {/* <div

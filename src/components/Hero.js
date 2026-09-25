@@ -2,71 +2,136 @@ import DotWave from "./DotWave";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-[rgb(var(--background))] text-[rgb(var(--color-h1-theme))]">
-
-      {/* DOT WAVE (RIGHT DOMINANT AREA) */}
+    <section
+      className="
+        relative
+        min-h-[650px]
+        md:h-screen
+        w-full
+        overflow-hidden
+        bg-[rgb(var(--background))]
+        text-[rgb(var(--color-h1-theme))]
+      "
+    >
+      {/* DOT WAVE */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute right-0 top-0 h-full w-full md:w-[70%] lg:w-[65%]">
+        <div
+          className="
+            absolute
+            right-0
+            top-0
+            h-full
+            w-full
+            md:w-[70%]
+            lg:w-[65%]
+          "
+        >
           <DotWave />
         </div>
       </div>
 
       {/* LEFT FADE OVERLAY */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[rgb(var(--background))] via-[rgb(var(--background))] to-transparent" />
+      <div
+        className="
+          absolute
+          inset-0
+          z-[1]
+          bg-gradient-to-r
+          from-[rgb(var(--background))]
+          via-[rgb(var(--background))]
+          to-transparent
+        "
+      />
 
       {/* CONTENT */}
-      <div className="relative z-10 h-full flex items-center">
+      <div
+        className="
+          relative
+          z-10
+          h-full
+          flex
+          items-start
+          md:items-center
+          pt-24
+          sm:pt-32
+          md:pt-0
+        "
+      >
         <div className="w-full px-6 sm:px-10 md:px-16">
-
           {/* TEXT CONTAINER */}
-          <div className="max-w-[90%] sm:max-w-[75%] md:max-w-[60%] lg:max-w-[520px]">
-
+          <div
+            className="
+              max-w-[320px]
+              sm:max-w-[420px]
+              md:max-w-[60%]
+              lg:max-w-[520px]
+            "
+          >
             {/* BRAND */}
-            <p className="text-xs sm:text-sm tracking-[0.25em] text-[rgb(var(--color-faint))] mb-4 sm:mb-6">
+            <p
+              className="
+                text-[11px]
+                sm:text-sm
+                tracking-[0.25em]
+                text-[rgb(var(--color-faint))]
+                mb-4
+                sm:mb-6
+              "
+            >
               STELLAR
             </p>
 
             {/* HEADING */}
-            <h1 className="
-              font-semibold leading-tight mb-5
-              text-xl
-              sm:text-2xl
-              md:text-3xl
-              lg:text-4xl
-              xl:text-5xl
-              text-[rgb(var(--color-h1-theme))]
-            ">
+            <h1
+              className="
+                font-semibold
+                leading-[1]
+                mb-5
+                text-[30px]
+                sm:text-[38px]
+                md:text-3xl
+                lg:text-4xl
+                xl:text-5xl
+                text-[rgb(var(--color-h1-theme))]
+              "
+            >
               BUILD AT THE EDGE OF DIGITAL TRANSFORMATION
             </h1>
 
             {/* DIVIDER */}
-            <div className="w-full h-[1px] bg-[rgb(var(--border-color))] mb-5 sm:mb-6"></div>
+            <div className="w-full h-[1px] bg-[rgb(var(--border-color))] mb-5 sm:mb-6" />
 
             {/* DESCRIPTION */}
-            <p className="
-              text-[rgb(var(--color-faint))] leading-relaxed mb-8
-              text-sm
-              sm:text-base
-              md:text-lg
-            ">
-              STELLAR delivers modern web solutions, scalable systems, and intelligent automation.
-              We help businesses move faster, build smarter, and lead in a digital-first world.
+            <p
+              className="
+                text-[rgb(var(--color-faint))]
+                leading-relaxed
+                mb-8
+                text-sm
+                sm:text-base
+                md:text-lg
+              "
+            >
+              STELLAR delivers modern web solutions, scalable systems, and
+              intelligent automation. We help businesses move faster, build
+              smarter, and lead in a digital-first world.
             </p>
 
             {/* CTA */}
-            <button className="
-              px-5 py-2.5
-              sm:px-6 sm:py-3
-              border border-[rgb(var(--border-color))]
-              hover:border-[rgb(var(--accent))]
-              transition
-              text-sm sm:text-base
-              text-[rgb(var(--color-h1-theme))]
-              bg-[rgb(var(--surface-primary))]
-            ">
+            <button
+              className="
+                px-5 py-2.5
+                sm:px-6 sm:py-3
+                border border-[rgb(var(--border-color))]
+                hover:border-[rgb(var(--accent))]
+                transition
+                text-sm sm:text-base
+                text-[rgb(var(--color-h1-theme))]
+                bg-[rgb(var(--surface-primary))]
+              "
+            >
               WORK WITH US
             </button>
-
           </div>
         </div>
       </div>

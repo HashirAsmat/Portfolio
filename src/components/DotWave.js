@@ -84,7 +84,7 @@ export default function DotWave() {
   }, []);
 
   return (
-    <div className={`w-full h-screen ${isLight ? "bg-white" : "bg-black"}`}>
+    <div className={`w-full h-full ${isLight ? "bg-white" : "bg-black"}`}>
       <Canvas camera={{ position: [0, 8, 20], fov: 50 }}>
         <color attach="background" args={[isLight ? "#ffffff" : "#000000"]} />
 

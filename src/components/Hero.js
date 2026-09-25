@@ -29,11 +29,11 @@ export default function Hero() {
             {/* HEADING */}
             <h1 className="
               font-semibold leading-tight mb-5
-              text-3xl
-              sm:text-4xl
-              md:text-5xl
-              lg:text-6xl
-              xl:text-7xl
+              text-xl
+              sm:text-2xl
+              md:text-3xl
+              lg:text-4xl
+              xl:text-5xl
               text-[rgb(var(--color-h1-theme))]
             ">
               BUILD AT THE EDGE OF DIGITAL TRANSFORMATION

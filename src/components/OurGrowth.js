@@ -8,7 +8,7 @@ export default function OurGrowth() {
           Our Growth
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 border border-[rgb(var(--border-color))]">
+        <div className="grid grid-cols-1 lg:grid-cols-3 border border-[#b9b7b1] dark:border-[#5d5d5d]">
           {ourGrowthData.map((item, index) => (
             <div
               key={item.id}
@@ -16,7 +16,8 @@ export default function OurGrowth() {
                 group
                 p-12 lg:p-14
                 min-h-[420px]
-                border-[rgb(var(--border-color))]
+                border-[#b9b7b1]
+                dark:border-[#5d5d5d]
                 transition-colors duration-300 ease-out
                 hover:bg-[rgb(var(--inverse-bg))]
                 hover:text-[rgb(var(--inverse-text))]

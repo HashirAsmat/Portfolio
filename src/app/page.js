@@ -17,8 +17,8 @@ export default function Home() {
      <Hero />
     {/* <ScrollDepthSection /> */}
 
-    <SectionHeading title={'selected work'}/>
-    <WorkCard/>
+    {/* <SectionHeading title={'selected work'}/> */}
+    {/* <WorkCard/> */}
     <OurGrowth />
     <CaseStudies />
     <Technologies />

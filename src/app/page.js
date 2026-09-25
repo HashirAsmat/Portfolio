@@ -9,7 +9,7 @@ import SectionHeading from "@/components/SectionHeading";
 import OurGrowth from "@/components/OurGrowth";
 import CaseStudies from "@/components/CaseStudies";
 import Technologies from "@/components/Technologies";
-
+import DevelopmentProcess from "@/components/DevelopmentProcess";
 export default function Home() {
   return (
     <>  
@@ -22,6 +22,7 @@ export default function Home() {
     <OurGrowth />
     <CaseStudies />
     <Technologies />
+    <DevelopmentProcess />
     <div className="parent-container px-6 sm:px-10 md:px-20 pt-10 relative max-w-[1300px] mx-auto">
 
 

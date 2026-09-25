@@ -2,7 +2,7 @@ import { developmentProcessData } from "@/app/data/developmentProcessData";
 
 export default function DevelopmentProcess() {
   return (
-    <section className="bg-[#0f0f0f] py-32 px-6 text-white">
+    <section className="bg-[rgb(var(--background))] py-32 px-6 text-[rgb(var(--color-h1-theme))]">
       <div className="max-w-[1700px] mx-auto">
         {/* Heading */}
         <div className="max-w-[950px]">
@@ -13,7 +13,7 @@ export default function DevelopmentProcess() {
               leading-[0.95]
               tracking-[-0.04em]
               font-light
-              text-white
+              text-[rgb(var(--color-h1-theme))]
             "
           >
             Our development
@@ -27,7 +27,7 @@ export default function DevelopmentProcess() {
               text-[13px]
               md:text-[14px]
               leading-[1.5]
-              text-[#d1d1d1]
+              text-[rgb(var(--color-faint))]
               max-w-[1200px]
             "
           >
@@ -44,14 +44,14 @@ export default function DevelopmentProcess() {
             <div
               key={step.number}
               className="
-                bg-[#1a1a1a]
-                border border-[#2a2a2a]
+                bg-[rgb(var(--surface-primary))]
+                border border-[rgb(var(--border-color))]
                 rounded-[14px]
                 p-3
                 min-h-[200px]
               "
             >
-              <span className="text-blue-500 text-[12px] font-medium">
+              <span className="text-[rgb(var(--accent))] text-[12px] font-medium">
                 {step.number}
               </span>
 
@@ -61,7 +61,7 @@ export default function DevelopmentProcess() {
                   text-[15px]
                   leading-[1.2]
                   font-light
-                  text-white
+                  text-[rgb(var(--color-h1-theme))]
                 "
               >
                 {step.title.split(" & ").map((part, index, arr) => (
@@ -77,7 +77,7 @@ export default function DevelopmentProcess() {
                   mt-2
                   text-[11px]
                   leading-[1.45]
-                  text-[#d1d1d1]
+                  text-[rgb(var(--color-faint))]
                 "
               >
                 {step.description}

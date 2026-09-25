@@ -31,21 +31,67 @@
 @tailwind utilities;
 
 :root {
-  --background: 16, 16, 16; /* Default to dark mode */
+  --background: 243, 243, 241;
+  --surface-primary: 247, 247, 245;
+  --surface-secondary: 236, 236, 232;
+  --color-faint: 95, 102, 115;
+  --color-h1-theme: 17, 24, 39;
+  --color-link-theme: 95, 102, 115;
+  --color-logo-theme: 17, 24, 39;
+  --border-color: 228, 228, 224;
+  --accent: 37, 99, 235;
+  --dark-surface: 11, 11, 11;
+  --inverse-bg: 17, 24, 39;
+  --inverse-text: 255, 255, 255;
+  background-color: rgb(var(--background));
+  color: rgb(var(--color-h1-theme));
+}
+
+.light {
+  --background: 243, 243, 241;
+  --surface-primary: 247, 247, 245;
+  --surface-secondary: 236, 236, 232;
+  --color-faint: 95, 102, 115;
+  --color-h1-theme: 17, 24, 39;
+  --color-link-theme: 95, 102, 115;
+  --color-logo-theme: 17, 24, 39;
+  --border-color: 228, 228, 224;
+  --accent: 37, 99, 235;
+  --dark-surface: 11, 11, 11;
+  --inverse-bg: 17, 24, 39;
+  --inverse-text: 255, 255, 255;
+  background-color: rgb(var(--background));
+  color: rgb(var(--color-h1-theme));
+}
+
+.dark {
+  --background: 11, 11, 11;
+  --surface-primary: 17, 17, 17;
+  --surface-secondary: 28, 28, 28;
   --color-faint: 160, 160, 160;
   --color-h1-theme: 240, 240, 240;
   --color-link-theme: 200, 200, 200;
   --color-logo-theme: 240, 240, 240;
-  background-color: rgba(var(--background));
+  --border-color: 48, 48, 48;
+  --accent: 96, 165, 250;
+  --dark-surface: 11, 11, 11;
+  --inverse-bg: 255, 255, 255;
+  --inverse-text: 17, 24, 39;
+  background-color: rgb(var(--background));
+  color: rgb(var(--color-h1-theme));
 }
 
-.light {
-  --background: 245, 245, 245;
-  --color-faint: 160, 160, 160;
-  --color-h1-theme: 16, 16, 16;
-  --color-link-theme: 127, 127, 127;
-  --color-logo-theme: 16, 16, 16;
-  background-color: rgba(var(--background));
+html, body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--color-h1-theme));
+}
+
+body {
+  min-height: 100vh;
+}
+
+* {
+  border-color: rgb(var(--border-color));
 }
 
 .parent-container {

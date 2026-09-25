@@ -2,7 +2,7 @@ import DotWave from "./DotWave";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-black text-white">
+    <section className="relative h-screen w-full overflow-hidden bg-[rgb(var(--background))] text-[rgb(var(--color-h1-theme))]">
 
       {/* DOT WAVE (RIGHT DOMINANT AREA) */}
       <div className="absolute inset-0 z-0">
@@ -12,7 +12,7 @@ export default function Hero() {
       </div>
 
       {/* LEFT FADE OVERLAY */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black via-black/90 to-transparent" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-[rgb(var(--background))] via-[rgb(var(--background))] to-transparent" />
 
       {/* CONTENT */}
       <div className="relative z-10 h-full flex items-center">
@@ -22,7 +22,7 @@ export default function Hero() {
           <div className="max-w-[90%] sm:max-w-[75%] md:max-w-[60%] lg:max-w-[520px]">
 
             {/* BRAND */}
-            <p className="text-xs sm:text-sm tracking-[0.25em] text-gray-400 mb-4 sm:mb-6">
+            <p className="text-xs sm:text-sm tracking-[0.25em] text-[rgb(var(--color-faint))] mb-4 sm:mb-6">
               STELLAR
             </p>
 
@@ -34,16 +34,17 @@ export default function Hero() {
               md:text-5xl
               lg:text-6xl
               xl:text-7xl
+              text-[rgb(var(--color-h1-theme))]
             ">
               BUILD AT THE EDGE OF DIGITAL TRANSFORMATION
             </h1>
 
             {/* DIVIDER */}
-            <div className="w-full h-[1px] bg-gray-700 mb-5 sm:mb-6"></div>
+            <div className="w-full h-[1px] bg-[rgb(var(--border-color))] mb-5 sm:mb-6"></div>
 
             {/* DESCRIPTION */}
             <p className="
-              text-gray-400 leading-relaxed mb-8
+              text-[rgb(var(--color-faint))] leading-relaxed mb-8
               text-sm
               sm:text-base
               md:text-lg
@@ -56,10 +57,12 @@ export default function Hero() {
             <button className="
               px-5 py-2.5
               sm:px-6 sm:py-3
-              border border-gray-500
-              hover:border-white
+              border border-[rgb(var(--border-color))]
+              hover:border-[rgb(var(--accent))]
               transition
               text-sm sm:text-base
+              text-[rgb(var(--color-h1-theme))]
+              bg-[rgb(var(--surface-primary))]
             ">
               WORK WITH US
             </button>

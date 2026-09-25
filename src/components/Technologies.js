@@ -1,9 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { technologiesData } from "@/app/data/technologiesData";
 
 export default function Technologies() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const updateTheme = () => setIsDarkMode(document.documentElement.classList.contains("dark"));
+    updateTheme();
+
+    const observer = new MutationObserver(updateTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
   const [showAll, setShowAll] = useState(false);
 
   const initialItems = 8;
@@ -13,7 +27,7 @@ export default function Technologies() {
     : technologiesData.slice(0, initialItems);
 
   return (
-    <section className="bg-[#0f0f0f] py-40 px-8 text-white">
+    <section className="bg-[rgb(var(--background))] py-40 px-8 text-[rgb(var(--color-h1-theme))]">
       <div className="max-w-[1800px] mx-auto">
         <div className="grid grid-cols-12">
           {/* Empty left side */}
@@ -23,13 +37,13 @@ export default function Technologies() {
           <div className="col-span-12 lg:col-span-6">
             {/* Paragraph */}
             <div className="max-w-[820px]">
-              <p className="text-[22px] leading-[1.45] font-normal text-white">
+              <p className="text-[22px] leading-[1.45] font-normal text-[rgb(var(--color-h1-theme))]">
                 Technology should serve business goals, not the other way
                 around. Every project comes with unique requirements,
                 constraints, and growth objectives.
               </p>
 
-              <p className="mt-10 text-[22px] leading-[1.45] font-normal text-white">
+              <p className="mt-10 text-[22px] leading-[1.45] font-normal text-[rgb(var(--color-h1-theme))]">
                 The diversity of technologies we work with enables us to solve
                 problems more efficiently. Instead of forcing every project into
                 the same stack, we carefully evaluate business needs and select
@@ -37,7 +51,7 @@ export default function Technologies() {
                 long-term vision.
               </p>
 
-              <p className="mt-10 text-[22px] leading-[1.45] font-normal text-white">
+              <p className="mt-10 text-[22px] leading-[1.45] font-normal text-[rgb(var(--color-h1-theme))]">
                 We specialize in multiple technologies because no single tool is
                 the right solution for every problem. Our expertise across
                 Salesforce, Shopify, React, Next.js, Node.js, databases, and
@@ -49,8 +63,16 @@ export default function Technologies() {
             {/* Large spacing like Catalyst */}
             <div className="mt-28">
               {/* Small label */}
-              <div className="inline-flex items-center px-3 h-6 rounded-full bg-[#ecececd7] mb-4">
-                <span className="text-[10px] font-medium text-black">
+              <div
+                className={`inline-flex items-center px-3 h-6 rounded-full mb-4 ${
+                  isDarkMode ? "bg-[#ECECE9]" : "bg-[rgb(var(--surface-secondary))]"
+                }`}
+              >
+                <span
+                  className={`text-[10px] font-medium ${
+                    isDarkMode ? "text-[#111827]" : "text-[rgb(var(--color-h1-theme))]"
+                  }`}
+                >
                   Technologies
                 </span>
               </div>
@@ -67,19 +89,20 @@ export default function Technologies() {
                         className="
                           h-[118px]
                           rounded-[18px]
-                          bg-[#ecececd7]
+                          bg-[#ECECE9]
                           flex
                           items-center
                           justify-center
                           transition-all
                           duration-300
                           hover:-translate-y-1
+                          border border-[rgb(var(--border-color))]
                         "
                       >
                         <Icon
                           className="w-14 h-14"
                           style={{
-                            color: tech.color || "#fff",
+                            color: isDarkMode ? tech.color || "#fff" : "#000000",
                           }}
                         />
                       </div>
@@ -90,19 +113,21 @@ export default function Technologies() {
                 {technologiesData.length > initialItems && (
                   <button
                     onClick={() => setShowAll(!showAll)}
-                    className="
+                    className={`
                       mt-3
                       w-full
                       h-7
                       rounded-full
-                      bg-[#ecececd7]
                       text-[10px]
                       font-medium
-                      text-[#111111]
                       transition-all
                       duration-300
-                      hover:bg-[#f3f3f3]
-                    "
+                      ${
+                        isDarkMode
+                          ? "bg-[#ECECE9] text-[#111827] hover:bg-[#F3F3F1]"
+                          : "bg-[rgb(var(--surface-secondary))] text-[rgb(var(--color-h1-theme))] hover:bg-[rgb(var(--surface-primary))]"
+                      }
+                    `}
                   >
                     {showAll
                       ? "Show less technologies"

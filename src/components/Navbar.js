@@ -7,16 +7,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
   const currentPath = usePathname();
 
-  // 🔥 sync DOM class with state
   useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
+    const root = document.documentElement;
+    root.classList.toggle("dark", darkMode);
+    root.classList.toggle("light", !darkMode);
   }, [darkMode]);
 
   const toggleDarkMode = () => {
@@ -59,7 +56,7 @@ export default function Navbar() {
         <div className="flex items-center space-x-3 h-[50px]">
           <Link href="/" aria-label="Go to homepage" className="flex items-center h-full">
             <img
-              src="/logos/NewStellarWhiteLogo.png"
+              src={darkMode ? "/logos/NewStellarWhiteLogo.png" : "/logos/NewStellarBgRemoved.png"}
               alt="Stellar logo"
               className="h-14 w-auto object-contain self-center"
             />

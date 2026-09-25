@@ -182,7 +182,7 @@ export default function WorkCard() {
   }, []);
 
   return (
-    <div className="w-full flex justify-center bg-black py-40">
+    <div className="w-full flex justify-center bg-[rgb(var(--background))] py-40">
 
       {/* 🔥 FULL ELEMENT SCALES TOGETHER */}
       <div
@@ -201,30 +201,14 @@ export default function WorkCard() {
         <div
           className="
           relative w-[1100px] h-[420px]
-          rounded-2xl overflow-hidden
-          border border-white/10
-          bg-[#0b0b0b]
+          rounded-[24px] overflow-hidden
+          border border-[rgb(var(--border-color))]
+          bg-[rgb(var(--surface-primary))]
           "
         >
 
-          {/* BACKGROUND GRADIENT */}
-          <div
-            className="absolute inset-0"
-            style={{
-              background: `
-                linear-gradient(
-                  to right,
-                  rgba(0,0,0,1) 0%,
-                  rgba(0,0,0,0.95) 25%,
-                  rgba(30,30,30,0.8) 55%,
-                  rgba(255,255,255,0.08) 100%
-                )
-              `,
-            }}
-          />
-
           {/* LABEL */}
-          <div className="absolute top-6 left-6 text-gray-400 text-sm tracking-widest z-10">
+          <div className="absolute top-6 left-6 text-[rgb(var(--color-faint))] text-sm tracking-widest z-10">
             01 | SALESFORCE ENGINEER
           </div>
 
@@ -252,11 +236,11 @@ export default function WorkCard() {
             {/* TEXT */}
             <div className="flex-1 flex items-center pl-10 pr-16">
               <div>
-                <h2 className="text-white text-4xl font-semibold mb-4">
+                <h2 className="text-[rgb(var(--color-h1-theme))] text-4xl font-semibold mb-4">
                   Salesforce Platform
                 </h2>
 
-                <p className="text-gray-400 text-lg">
+                <p className="text-[rgb(var(--color-faint))] text-lg">
                   Custom solutions. Smarter automation. Better CRM.
                 </p>
               </div>
@@ -265,7 +249,7 @@ export default function WorkCard() {
           </div>
 
           {/* subtle border */}
-          <div className="absolute inset-0 rounded-2xl border border-white/5 pointer-events-none" />
+          <div className="absolute inset-0 rounded-[24px] border border-[rgb(var(--border-color))] pointer-events-none" />
         </div>
       </div>
     </div>

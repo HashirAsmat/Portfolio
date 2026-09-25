@@ -100,7 +100,7 @@ export default function SectionHeading({
   const [minScale, maxScale] = scaleRange;
 
   return (
-    <div className="w-full flex justify-center bg-black pt-32 pb-10">
+    <div className="w-full flex justify-center bg-[rgb(var(--background))] pt-32 pb-10">
       
       {/* STATIC WRAPPER (no transform here) */}
       <div ref={ref} className="relative">
@@ -116,7 +116,7 @@ export default function SectionHeading({
           }}
           className={`will-change-transform transition-transform duration-200 ${className}`}
         >
-          <h2 className="text-gray-500 text-lg tracking-[0.4em] uppercase">
+          <h2 className="text-[rgb(var(--color-faint))] text-lg tracking-[0.4em] uppercase">
             {title}
           </h2>
         </div>

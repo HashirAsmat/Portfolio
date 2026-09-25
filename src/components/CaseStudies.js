@@ -2,9 +2,9 @@ import { caseStudiesData } from "@/app/data/caseStudiesData";
 
 export default function CaseStudies() {
   return (
-    <section className="bg-black py-20 px-5 text-white">
+    <section className="bg-[rgb(var(--background))] py-20 px-5 text-[rgb(var(--color-h1-theme))]">
       <div className="max-w-[1600px] mx-auto">
-        <h2 className="text-center text-[18px] tracking-[0.35em] uppercase mb-16 text-white">
+        <h2 className="text-center text-[18px] tracking-[0.35em] uppercase mb-16 text-[rgb(var(--color-h1-theme))]">
           Case Studies
         </h2>
 
@@ -24,8 +24,8 @@ function Card({ item, className = "" }) {
     <div
       className={`
         ${className}
-        bg-[#111111]
-        border border-gray-700
+        bg-[rgb(var(--surface-primary))]
+        border border-[rgb(var(--border-color))]
         rounded-[24px]
         p-6 sm:p-7
         min-h-[360px] sm:min-h-[430px]
@@ -34,7 +34,7 @@ function Card({ item, className = "" }) {
       `}
     >
       <div className="flex justify-between items-start gap-4">
-        <h3 className="text-[20px] sm:text-[24px] leading-[1.2] font-light max-w-[260px] text-white">
+        <h3 className="text-[20px] sm:text-[24px] leading-[1.2] font-light max-w-[260px] text-[rgb(var(--color-h1-theme))]">
           {item.title}
         </h3>
 
@@ -46,8 +46,8 @@ function Card({ item, className = "" }) {
             w-11
             h-11
             rounded-full
-            bg-[#ececec]
-            text-black
+            bg-[rgb(var(--inverse-bg))]
+            text-[rgb(var(--inverse-text))]
             flex
             items-center
             justify-center
@@ -56,8 +56,8 @@ function Card({ item, className = "" }) {
             font-semibold
             transition-all
             duration-300
-            hover:bg-[#dcdcdc]
-            [&>span]:text-black
+            hover:opacity-85
+            [&>span]:text-[rgb(var(--inverse-text))]
           "
         >
           <span>→</span>
@@ -65,7 +65,7 @@ function Card({ item, className = "" }) {
       </div>
 
       <div className="mt-auto">
-        <p className="text-[15px] leading-[1.7] text-gray-400 mb-6">
+        <p className="text-[15px] leading-[1.7] text-[rgb(var(--color-faint))] mb-6">
           {item.description}
         </p>
 
@@ -77,11 +77,11 @@ function Card({ item, className = "" }) {
                 px-3
                 py-1.5
                 rounded-full
-                bg-[#ececec]
+                bg-[rgb(var(--inverse-bg))]
                 text-[11px]
                 font-medium
-                text-black
-                border border-gray-700
+                text-[rgb(var(--inverse-text))]
+                border border-[rgb(var(--inverse-bg))]
               "
             >
               {tag}

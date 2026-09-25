@@ -8,6 +8,7 @@ import WorkCard from "@/components/WorkCard";
 import SectionHeading from "@/components/SectionHeading";
 import OurGrowth from "@/components/OurGrowth";
 import CaseStudies from "@/components/CaseStudies";
+import Technologies from "@/components/Technologies";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
     <WorkCard/>
     <OurGrowth />
     <CaseStudies />
+    <Technologies />
     <div className="parent-container px-6 sm:px-10 md:px-20 pt-10 relative max-w-[1300px] mx-auto">
 
 
@@ -31,9 +33,9 @@ export default function Home() {
         <WorkHistory />
       </div> */}
       
-      <div className="mt-10">
+      {/* <div className="mt-10">
         <TechnologyStack />
-      </div>
+      </div> */}
       <div className="mt-10">
         <FeaturedProjects />
       </div>
